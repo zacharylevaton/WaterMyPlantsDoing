@@ -1,0 +1,20 @@
+#Title, #Content {
+    width: 100%;
+}
+
+#Content {
+    text-align: center;
+}
+
+.Content-Photo {
+    width: 50vh;
+    height: 80vh;
+}
+
+.Content-Status {
+    height: 20vh
+}
+
+.Content-Graph {
+    height: 60vh
+}

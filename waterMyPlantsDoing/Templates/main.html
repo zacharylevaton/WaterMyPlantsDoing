@@ -1,4 +1,85 @@
 {% extends "layout.html" %}
 {% block content %}
-HELLO!
+    <!-- Navbar -->
+    <header id="Title">
+        <div class="container pt-2 pb-2">
+            <h1 align="center">Water My Plants Doing?<h1>
+            <h4 align="center">
+                A simple application to monitor the moisture level of my plants' soil.
+            </h4>
+        </div>
+    </header>
+
+    <header id="Content">
+        <div class="container-flex pl-4 pr-5">
+            <div class="row">
+                <!-- Left Content Area -->
+                <div class="col" align="center">
+                    <div class="row">
+                        <div class="col">
+                            <img class="Content-Photo" src="/static/bonsai.jpeg">
+                        </div>
+                        <div class="col">
+                            {% if bonsai %}
+                                <div class="panel status bg-primary">
+                                    <div class="panel-heading">
+                                        <h1 class="panel-title text-center">ALL GOOD</h1>
+                                    </div>
+                                    <div class="panel-body text-center">
+                                        <strong>BONSAI IS WATERED!</strong>
+                                    </div>
+                                </div>
+                            {% else %}
+                                <div class="panel status bg-danger">
+                                    <div class="panel-heading">
+                                        <h1 class="panel-title text-center">NOT GOOD</h1>
+                                    </div>
+                                    <div class="panel-body text-center">
+                                        <strong>WATER MY BONSAI!!!</strong>
+                                    </div>
+                                </div>
+                            {% endif %}
+                            <div class="row Content-Graph">
+                                Graph
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Content Area -->
+                <div class="col" align="center">
+                    <div class="row">
+                        <div class="col">
+                            <img class="Content-Photo" src="/static/bigboi.jpeg">
+                        </div>
+                        <div class="col">
+                            {% if bigboi %}
+                                <div class="panel status bg-primary">
+                                    <div class="panel-heading">
+                                        <h1 class="panel-title text-center">ALL GOOD</h1>
+                                    </div>
+                                    <div class="panel-body text-center">
+                                        <strong>BIG BOI IS WATERED!</strong>
+                                    </div>
+                                </div>
+                            {% else %}
+                                <div class="panel status bg-danger">
+                                    <div class="panel-heading">
+                                        <h1 class="panel-title text-center">NOT GOOD</h1>
+                                    </div>
+                                    <div class="panel-body text-center">
+                                        <strong>WATER THE BIG BOI!!!</strong>
+                                    </div>
+                                </div>
+                            {% endif %}
+                            <div class="row Content-Graph">
+                                Graph
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
 {% endblock content %}

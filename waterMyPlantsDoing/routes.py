@@ -5,4 +5,4 @@ from datetime import datetime
 
 @app.route('/')
 def home():
-    return render_template('main.html')
+    return render_template('main.html', bonsai=True, bigboi=True)
